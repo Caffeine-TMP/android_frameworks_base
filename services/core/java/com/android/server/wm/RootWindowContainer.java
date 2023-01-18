@@ -798,11 +798,7 @@ class RootWindowContainer extends WindowContainer<DisplayContent>
                     UPDATE_FOCUS_WILL_PLACE_SURFACES, false /*updateInputWindows*/);
         }
 
-<<<<<<< HEAD
-        mHoldScreen = null;
         mButtonBrightnessOverride = PowerManager.BRIGHTNESS_INVALID_FLOAT;
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
         mScreenBrightnessOverride = PowerManager.BRIGHTNESS_INVALID_FLOAT;
         mUserActivityTimeout = -1;
         mObscureApplicationContentOnSecondaryDisplays = false;
@@ -1080,22 +1076,10 @@ class RootWindowContainer extends WindowContainer<DisplayContent>
             }
         }
         if (w.mHasSurface && canBeSeen) {
-<<<<<<< HEAD
-            if ((attrFlags & FLAG_KEEP_SCREEN_ON) != 0) {
-                mHoldScreen = w.mSession;
-                mHoldScreenWindow = w;
-            } else if (w == mWmService.mLastWakeLockHoldingWindow) {
-                ProtoLog.d(WM_DEBUG_KEEP_SCREEN_ON,
-                        "handleNotObscuredLocked: %s was holding screen wakelock but no longer "
-                                + "has FLAG_KEEP_SCREEN_ON!!! called by%s",
-                        w, Debug.getCallers(10));
-            }
             if (!syswin && w.mAttrs.buttonBrightness >= 0
                     && Float.isNaN(mButtonBrightnessOverride)) {
                 mButtonBrightnessOverride = w.mAttrs.buttonBrightness;
             }
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
             if (!syswin && w.mAttrs.screenBrightness >= 0
                     && Float.isNaN(mScreenBrightnessOverride)) {
                 mScreenBrightnessOverride = w.mAttrs.screenBrightness;
