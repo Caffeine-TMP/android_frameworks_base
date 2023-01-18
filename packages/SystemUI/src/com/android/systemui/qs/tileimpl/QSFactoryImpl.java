@@ -43,6 +43,7 @@ import com.android.systemui.qs.tiles.ColorInversionTile;
 import com.android.systemui.qs.tiles.DataSaverTile;
 import com.android.systemui.qs.tiles.DeviceControlsTile;
 import com.android.systemui.qs.tiles.DndTile;
+import com.android.systemui.qs.tiles.DreamTile;
 import com.android.systemui.qs.tiles.FlashlightTile;
 import com.android.systemui.qs.tiles.HeadsUpTile;
 import com.android.systemui.qs.tiles.HotspotTile;
@@ -106,6 +107,7 @@ public class QSFactoryImpl implements QSFactory {
     private final Provider<QuickAccessWalletTile> mQuickAccessWalletTileProvider;
     private final Provider<QRCodeScannerTile> mQRCodeScannerTileProvider;
     private final Provider<OneHandedModeTile> mOneHandedModeTileProvider;
+<<<<<<< HEAD
     private final Provider<AmbientDisplayTile> mAmbientDisplayTileProvider;
     private final Provider<AODTile> mAODTileProvider;
     private final Provider<CaffeineTile> mCaffeineTileProvider;
@@ -115,6 +117,9 @@ public class QSFactoryImpl implements QSFactory {
     private final Provider<UsbTetherTile> mUsbTetherTileProvider;
     private final Provider<VpnTile> mVpnTileProvider;
     private final Provider<VPNTetheringTile> mVPNTetheringTileProvider;
+=======
+    private final Provider<DreamTile> mDreamTileProvider;
+>>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 
     private final Lazy<QSHost> mQsHostLazy;
     private final Provider<CustomTile.Builder> mCustomTileBuilderProvider;
@@ -152,6 +157,7 @@ public class QSFactoryImpl implements QSFactory {
             Provider<QRCodeScannerTile> qrCodeScannerTileProvider,
             Provider<OneHandedModeTile> oneHandedModeTileProvider,
             Provider<ColorCorrectionTile> colorCorrectionTileProvider,
+<<<<<<< HEAD
             Provider<AmbientDisplayTile> ambientDisplayTileProvider,
             Provider<AODTile> aodTileProvider,
             Provider<CaffeineTile> caffeineTileProvider,
@@ -161,6 +167,9 @@ public class QSFactoryImpl implements QSFactory {
             Provider<UsbTetherTile> usbTetherTileProvider,
             Provider<VpnTile> vpnTileProvider,
             Provider<VPNTetheringTile> vpnTetheringTileProvider) {
+=======
+            Provider<DreamTile> dreamTileProvider) {
+>>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
         mQsHostLazy = qsHostLazy;
         mCustomTileBuilderProvider = customTileBuilderProvider;
 
@@ -193,6 +202,7 @@ public class QSFactoryImpl implements QSFactory {
         mQRCodeScannerTileProvider = qrCodeScannerTileProvider;
         mOneHandedModeTileProvider = oneHandedModeTileProvider;
         mColorCorrectionTileProvider = colorCorrectionTileProvider;
+<<<<<<< HEAD
         mAmbientDisplayTileProvider = ambientDisplayTileProvider;
         mAODTileProvider = aodTileProvider;
         mCaffeineTileProvider = caffeineTileProvider;
@@ -202,6 +212,9 @@ public class QSFactoryImpl implements QSFactory {
         mUsbTetherTileProvider = usbTetherTileProvider;
         mVpnTileProvider = vpnTileProvider;
         mVPNTetheringTileProvider = vpnTetheringTileProvider;
+=======
+        mDreamTileProvider = dreamTileProvider;
+>>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     }
 
     /** Creates a tile with a type based on {@code tileSpec} */
@@ -275,6 +288,7 @@ public class QSFactoryImpl implements QSFactory {
                 return mOneHandedModeTileProvider.get();
             case "color_correction":
                 return mColorCorrectionTileProvider.get();
+<<<<<<< HEAD
             // Additional tiles.
             case "ambient_display":
                 return mAmbientDisplayTileProvider.get();
@@ -294,6 +308,10 @@ public class QSFactoryImpl implements QSFactory {
                 return mVpnTileProvider.get();
             case "vpn_tethering":
                 return mVPNTetheringTileProvider.get();
+=======
+            case "dream":
+                return mDreamTileProvider.get();
+>>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
         }
 
         // Custom tiles
