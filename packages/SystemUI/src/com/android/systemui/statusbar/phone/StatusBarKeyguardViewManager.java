@@ -442,15 +442,11 @@ public class StatusBarKeyguardViewManager implements RemoteInputController.Callb
         } else if (!mShowing && isBouncerInTransit()) {
             // Keyguard is not visible anymore, but expansion animation was still running.
             // We need to hide the bouncer, otherwise it will be stuck in transit.
-<<<<<<< HEAD
-            mBouncer.setExpansion(KeyguardBouncer.EXPANSION_HIDDEN);
-=======
             if (mBouncer != null) {
                 mBouncer.setExpansion(KeyguardBouncer.EXPANSION_HIDDEN);
             } else {
                 mBouncerInteractor.setExpansion(KeyguardBouncer.EXPANSION_HIDDEN);
             }
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
         } else if (mPulsing && fraction == KeyguardBouncer.EXPANSION_VISIBLE) {
             // Panel expanded while pulsing but didn't translate the bouncer (because we are
             // unlocked.) Let's simply wake-up to dismiss the lock screen.

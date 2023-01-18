@@ -86,11 +86,8 @@ import com.android.systemui.shared.tracing.ProtoTraceable;
 import com.android.systemui.tracing.ProtoTracer;
 import com.android.systemui.tracing.nano.EdgeBackGestureHandlerProto;
 import com.android.systemui.tracing.nano.SystemUiTraceProto;
-<<<<<<< HEAD
 import com.android.systemui.tuner.TunerService;
-=======
 import com.android.systemui.util.Assert;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 import com.android.wm.shell.back.BackAnimation;
 import com.android.wm.shell.pip.Pip;
 

@@ -178,11 +178,7 @@ class RootWindowContainer extends WindowContainer<DisplayContent>
     private static final String TAG_RECENTS = TAG + POSTFIX_RECENTS;
 
     private Object mLastWindowFreezeSource = null;
-<<<<<<< HEAD
-    private Session mHoldScreen = null;
     private float mButtonBrightnessOverride = PowerManager.BRIGHTNESS_INVALID_FLOAT;
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     private float mScreenBrightnessOverride = PowerManager.BRIGHTNESS_INVALID_FLOAT;
     private long mUserActivityTimeout = -1;
     private boolean mUpdateRotation = false;

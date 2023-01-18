@@ -33,19 +33,13 @@ import static org.mockito.Mockito.when;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-<<<<<<< HEAD
-=======
 import android.content.SharedPreferences;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 import android.database.ContentObserver;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.UserHandle;
 import android.testing.AndroidTestingRunner;
-<<<<<<< HEAD
-=======
 import android.util.SparseArray;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -76,10 +70,7 @@ import com.android.systemui.statusbar.phone.AutoTileManager;
 import com.android.systemui.statusbar.phone.CentralSurfaces;
 import com.android.systemui.statusbar.phone.StatusBarIconController;
 import com.android.systemui.tuner.TunerService;
-<<<<<<< HEAD
-=======
 import com.android.systemui.util.FakeSharedPreferences;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 import com.android.systemui.util.concurrency.FakeExecutor;
 import com.android.systemui.util.settings.FakeSettings;
 import com.android.systemui.util.settings.SecureSettings;
@@ -152,11 +143,6 @@ public class QSTileHostTest extends SysuiTestCase {
 
     private FakeExecutor mMainExecutor;
 
-<<<<<<< HEAD
-    private FakeExecutor mMainExecutor;
-
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     private QSTileHost mQSTileHost;
 
     @Before
@@ -164,11 +150,8 @@ public class QSTileHostTest extends SysuiTestCase {
         MockitoAnnotations.initMocks(this);
         mMainExecutor = new FakeExecutor(new FakeSystemClock());
 
-<<<<<<< HEAD
-=======
         mSharedPreferencesByUser = new SparseArray<>();
 
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
         when(mTileServiceRequestControllerBuilder.create(any()))
                 .thenReturn(mTileServiceRequestController);
         when(mTileLifecycleManagerFactory.create(any(Intent.class), any(UserHandle.class)))
@@ -188,12 +171,8 @@ public class QSTileHostTest extends SysuiTestCase {
         mQSTileHost = new TestQSTileHost(mContext, mIconController, mDefaultFactory, mMainExecutor,
                 mPluginManager, mTunerService, mAutoTiles, mDumpManager, mCentralSurfaces,
                 mQSLogger, mUiEventLogger, mUserTracker, mSecureSettings, mCustomTileStatePersister,
-<<<<<<< HEAD
-                mTileServiceRequestControllerBuilder, mTileLifecycleManagerFactory);
-=======
                 mTileServiceRequestControllerBuilder, mTileLifecycleManagerFactory,
                 mUserFileManager);
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 
         mSecureSettings.registerContentObserverForUser(SETTING, new ContentObserver(null) {
             @Override
@@ -261,50 +240,6 @@ public class QSTileHostTest extends SysuiTestCase {
         saveSetting("not-valid");
 
         assertEquals(2, mQSTileHost.getTiles().size());
-    }
-
-    @Test
-    public void testRemoveWifiAndCellularWithoutInternet() {
-        saveSetting("wifi, spec1, cell, spec2");
-
-        assertEquals("internet", mQSTileHost.mTileSpecs.get(0));
-        assertEquals("spec1", mQSTileHost.mTileSpecs.get(1));
-        assertEquals("spec2", mQSTileHost.mTileSpecs.get(2));
-    }
-
-    @Test
-    public void testRemoveWifiAndCellularWithInternet() {
-        saveSetting("wifi, spec1, cell, spec2, internet");
-
-        assertEquals("spec1", mQSTileHost.mTileSpecs.get(0));
-        assertEquals("spec2", mQSTileHost.mTileSpecs.get(1));
-        assertEquals("internet", mQSTileHost.mTileSpecs.get(2));
-    }
-
-    @Test
-    public void testRemoveWifiWithoutInternet() {
-        saveSetting("spec1, wifi, spec2");
-
-        assertEquals("spec1", mQSTileHost.mTileSpecs.get(0));
-        assertEquals("internet", mQSTileHost.mTileSpecs.get(1));
-        assertEquals("spec2", mQSTileHost.mTileSpecs.get(2));
-    }
-
-    @Test
-    public void testRemoveCellWithInternet() {
-        saveSetting("spec1, spec2, cell, internet");
-
-        assertEquals("spec1", mQSTileHost.mTileSpecs.get(0));
-        assertEquals("spec2", mQSTileHost.mTileSpecs.get(1));
-        assertEquals("internet", mQSTileHost.mTileSpecs.get(2));
-    }
-
-    @Test
-    public void testNoWifiNoCellularNoInternet() {
-        saveSetting("spec1,spec2");
-
-        assertEquals("spec1", mQSTileHost.mTileSpecs.get(0));
-        assertEquals("spec2", mQSTileHost.mTileSpecs.get(1));
     }
 
     @Test
@@ -571,8 +506,6 @@ public class QSTileHostTest extends SysuiTestCase {
         assertEquals("spec1", getSetting());
     }
 
-<<<<<<< HEAD
-=======
     @Test
     public void testIsTileAdded_true() {
         int user = mUserTracker.getUserId();
@@ -685,7 +618,6 @@ public class QSTileHostTest extends SysuiTestCase {
         return mUserFileManager.getSharedPreferences(QSTileHost.TILES, 0, user);
     }
 
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     private class TestQSTileHost extends QSTileHost {
         TestQSTileHost(Context context, StatusBarIconController iconController,
                 QSFactory defaultFactory, Executor mainExecutor,
@@ -695,13 +627,6 @@ public class QSTileHostTest extends SysuiTestCase {
                 UserTracker userTracker, SecureSettings secureSettings,
                 CustomTileStatePersister customTileStatePersister,
                 TileServiceRequestController.Builder tileServiceRequestControllerBuilder,
-<<<<<<< HEAD
-                TileLifecycleManager.Factory tileLifecycleManagerFactory) {
-            super(context, iconController, defaultFactory, mainExecutor, pluginManager,
-                    tunerService, autoTiles, dumpManager, Optional.of(centralSurfaces), qsLogger,
-                    uiEventLogger, userTracker, secureSettings, customTileStatePersister,
-                    tileServiceRequestControllerBuilder, tileLifecycleManagerFactory);
-=======
                 TileLifecycleManager.Factory tileLifecycleManagerFactory,
                 UserFileManager userFileManager) {
             super(context, iconController, defaultFactory, mainExecutor, pluginManager,
@@ -709,7 +634,6 @@ public class QSTileHostTest extends SysuiTestCase {
                     uiEventLogger, userTracker, secureSettings, customTileStatePersister,
                     tileServiceRequestControllerBuilder, tileLifecycleManagerFactory,
                     userFileManager);
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
         }
 
         @Override

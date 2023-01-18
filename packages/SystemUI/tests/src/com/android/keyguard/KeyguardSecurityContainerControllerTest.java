@@ -80,10 +80,6 @@ import java.util.Optional;
 @RunWith(AndroidTestingRunner.class)
 @TestableLooper.RunWithLooper()
 public class KeyguardSecurityContainerControllerTest extends SysuiTestCase {
-<<<<<<< HEAD
-    private static final int VIEW_WIDTH = 1600;
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     private static final int TARGET_USER_ID = 100;
 
     @Rule
@@ -304,8 +300,6 @@ public class KeyguardSecurityContainerControllerTest extends SysuiTestCase {
     }
 
     @Test
-<<<<<<< HEAD
-=======
     public void onBouncerVisibilityChanged_allConditionsGood_sideFpsHintShown() {
         setupConditionsToEnableSideFpsHint();
         reset(mSidefpsController);
@@ -422,7 +416,6 @@ public class KeyguardSecurityContainerControllerTest extends SysuiTestCase {
     }
 
     @Test
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     public void showNextSecurityScreenOrFinish_setsSecurityScreenToPinAfterSimPinUnlock() {
         // GIVEN the current security method is SimPin
         when(mKeyguardUpdateMonitor.getUserHasTrust(anyInt())).thenReturn(false);
@@ -459,8 +452,6 @@ public class KeyguardSecurityContainerControllerTest extends SysuiTestCase {
         assertThat(keyguardDone).isEqualTo(false);
         verify(mKeyguardUpdateMonitor, never()).getUserHasTrust(anyInt());
     }
-<<<<<<< HEAD
-=======
 
     private void setupConditionsToEnableSideFpsHint() {
         attachView();
@@ -495,5 +486,4 @@ public class KeyguardSecurityContainerControllerTest extends SysuiTestCase {
                 any(), any(KeyguardSecurityCallback.class)))
                 .thenReturn((KeyguardInputViewController) mKeyguardPasswordViewControllerMock);
     }
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 }

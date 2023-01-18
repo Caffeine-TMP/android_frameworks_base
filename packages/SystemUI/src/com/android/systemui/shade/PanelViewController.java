@@ -405,13 +405,8 @@ public abstract class PanelViewController {
             beginJankMonitoring();
         }
         mInitialOffsetOnTouch = expandedHeight;
-<<<<<<< HEAD:packages/SystemUI/src/com/android/systemui/statusbar/phone/PanelViewController.java
-        mInitialTouchY = newY;
-        mInitialTouchX = newX;
-=======
         mInitialExpandY = newY;
         mInitialExpandX = newX;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b:packages/SystemUI/src/com/android/systemui/shade/PanelViewController.java
         mInitialTouchFromKeyguard = mKeyguardStateController.isShowing();
         if (startTracking) {
             mTouchSlopExceeded = true;
@@ -441,11 +436,8 @@ public abstract class PanelViewController {
             } else if (event.getActionMasked() == MotionEvent.ACTION_CANCEL || forceCancel) {
                 if (onKeyguard) {
                     expand = true;
-<<<<<<< HEAD:packages/SystemUI/src/com/android/systemui/statusbar/phone/PanelViewController.java
-=======
                 } else if (mCentralSurfaces.isBouncerShowingOverDream()) {
                     expand = false;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b:packages/SystemUI/src/com/android/systemui/shade/PanelViewController.java
                 } else {
                     // If we get a cancel, put the shade back to the state it was in when the
                     // gesture started

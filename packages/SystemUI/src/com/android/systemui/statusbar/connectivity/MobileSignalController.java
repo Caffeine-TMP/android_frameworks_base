@@ -297,14 +297,6 @@ public class MobileSignalController extends SignalController<MobileState, Mobile
         CharSequence qsDescription = null;
 
         if (mCurrentState.dataSim) {
-<<<<<<< HEAD
-            if (mProviderModelBehavior) {
-=======
-            // only show QS icons if the state is also default
-            if (!mCurrentState.isDefault) {
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
-                return new QsInfo(qsTypeIcon, qsIcon, qsDescription);
-            }
 
             if (mCurrentState.showQuickSettingsRatIcon() || mConfig.alwaysShowDataRatIcon) {
                 qsTypeIcon = dataTypeIcon;

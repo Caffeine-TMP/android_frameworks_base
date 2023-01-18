@@ -53,10 +53,7 @@ import com.android.systemui.plugins.statusbar.StatusBarStateController;
 import com.android.systemui.qs.customize.QSCustomizerController;
 import com.android.systemui.qs.dagger.QSFragmentComponent;
 import com.android.systemui.qs.external.TileServiceRequestController;
-<<<<<<< HEAD
-=======
 import com.android.systemui.qs.footer.ui.viewmodel.FooterActionsViewModel;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 import com.android.systemui.statusbar.CommandQueue;
 import com.android.systemui.statusbar.StatusBarState;
 import com.android.systemui.statusbar.phone.KeyguardBypassController;

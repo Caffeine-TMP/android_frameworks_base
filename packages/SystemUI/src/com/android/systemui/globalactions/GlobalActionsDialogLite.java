@@ -179,12 +179,10 @@ public class GlobalActionsDialogLite implements DialogInterface.OnDismissListene
 
     private static final String TAG = "GlobalActionsDialogLite";
 
-<<<<<<< HEAD
+    private static final String INTERACTION_JANK_TAG = "global_actions";
+
     private static final String POWER_MENU_ACTIONS_STRING =
             "customsecure:" + Settings.Secure.POWER_MENU_ACTIONS;
-=======
-    private static final String INTERACTION_JANK_TAG = "global_actions";
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 
     private static final boolean SHOW_SILENT_TOGGLE = true;
 
@@ -1160,11 +1158,7 @@ public class GlobalActionsDialogLite implements DialogInterface.OnDismissListene
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-<<<<<<< HEAD
-                    mScreenshotHelper.takeScreenshot(type, true, true,
-=======
-                    mScreenshotHelper.takeScreenshot(TAKE_SCREENSHOT_FULLSCREEN,
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
+                    mScreenshotHelper.takeScreenshot(type,
                             SCREENSHOT_GLOBAL_ACTIONS, mHandler, null);
                     mMetricsLogger.action(MetricsEvent.ACTION_SCREENSHOT_POWER_MENU);
                     mUiEventLogger.log(GlobalActionsEvent.GA_SCREENSHOT_PRESS);

@@ -5491,7 +5491,15 @@ public final class Settings {
         public static final String MULTI_AUDIO_FOCUS_ENABLED = "multi_audio_focus_enabled";
 
         /**
-<<<<<<< HEAD
+         * Whether desktop mode is enabled or not.
+         * 0 = off
+         * 1 = on
+         * @hide
+         */
+        @Readable
+        public static final String DESKTOP_MODE = "desktop_mode";
+
+        /**
          * Volume keys control cursor in text fields (default is 0)
          * 0 - Disabled
          * 1 - Volume up/down moves cursor left/right
@@ -6108,15 +6116,6 @@ public final class Settings {
          */
         public static final String DISPLAY_PICTURE_ADJUSTMENT =
                 "display_picture_adjustment";
-=======
-         * Whether desktop mode is enabled or not.
-         * 0 = off
-         * 1 = on
-         * @hide
-         */
-        @Readable
-        public static final String DESKTOP_MODE = "desktop_mode";
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 
         /**
          * IMPORTANT: If you add a new public settings you also have to add it to
@@ -11731,7 +11730,23 @@ public final class Settings {
                 "launcher_taskbar_education_showing";
 
         /**
-<<<<<<< HEAD
+         * Whether or not adaptive charging feature is enabled by user.
+         * Type: int (0 for false, 1 for true)
+         * Default: 1
+         *
+         * @hide
+         */
+        public static final String ADAPTIVE_CHARGING_ENABLED = "adaptive_charging_enabled";
+
+        /**
+         * Whether battery saver is currently set to different schedule mode.
+         *
+         * @hide
+         */
+        public static final String EXTRA_AUTOMATIC_POWER_SAVE_MODE =
+                "extra_automatic_power_save_mode";
+
+        /**
          * Whether touch hovering is enabled on supported hardware
          * @hide
          */
@@ -11770,23 +11785,6 @@ public final class Settings {
          * @hide
          */
         public static final String SWAP_CAPACITIVE_KEYS = "swap_capacitive_keys";
-=======
-         * Whether or not adaptive charging feature is enabled by user.
-         * Type: int (0 for false, 1 for true)
-         * Default: 1
-         *
-         * @hide
-         */
-        public static final String ADAPTIVE_CHARGING_ENABLED = "adaptive_charging_enabled";
-
-        /**
-         * Whether battery saver is currently set to different schedule mode.
-         *
-         * @hide
-         */
-        public static final String EXTRA_AUTOMATIC_POWER_SAVE_MODE =
-                "extra_automatic_power_save_mode";
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 
         /**
          * These entries are considered common between the personal and the managed profile,

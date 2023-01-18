@@ -460,7 +460,13 @@ class AutomaticBrightnessController {
         return mAmbientLux;
     }
 
-<<<<<<< HEAD
+    float getSlowAmbientLux() {
+        return mSlowAmbientLux;
+    }
+    float getFastAmbientLux() {
+        return mFastAmbientLux;
+    }
+
     private void handleSettingsChange(boolean autoBrightnessOneShot) {
         if (mAutoBrightnessOneShot && !autoBrightnessOneShot) {
             mSensorManager.registerListener(mLightSensorListener, mLightSensor,
@@ -469,14 +475,6 @@ class AutomaticBrightnessController {
             mSensorManager.unregisterListener(mLightSensorListener);
         }
         mAutoBrightnessOneShot = autoBrightnessOneShot;
-=======
-    float getSlowAmbientLux() {
-        return mSlowAmbientLux;
-    }
-
-    float getFastAmbientLux() {
-        return mFastAmbientLux;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     }
 
     private boolean setDisplayPolicy(int policy) {

@@ -84,11 +84,7 @@ import com.android.systemui.shared.system.QuickStepContract;
 import com.android.systemui.statusbar.phone.AutoHideController;
 import com.android.systemui.statusbar.phone.CentralSurfaces;
 import com.android.systemui.statusbar.phone.LightBarTransitionsController;
-<<<<<<< HEAD
-import com.android.systemui.statusbar.phone.NotificationPanelViewController;
 import com.android.systemui.tuner.TunerService;
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 import com.android.wm.shell.back.BackAnimation;
 import com.android.wm.shell.pip.Pip;
 

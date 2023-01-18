@@ -1116,10 +1116,6 @@ public class AudioService extends IAudioService.Stub
                         MAX_STREAM_VOLUME[AudioSystem.STREAM_SYSTEM];
         }
 
-<<<<<<< HEAD
-        mVoiceCapable = context.getResources().getBoolean(
-                com.android.internal.R.bool.config_voice_capable);
-=======
         // Read following properties to configure max volume (number of steps) and default volume
         //   for STREAM_NOTIFICATION and STREAM_RING:
         //      config_audio_notif_vol_default
@@ -1161,7 +1157,9 @@ public class AudioService extends IAudioService.Stub
                 Log.e(TAG, "Error querying default vol for stream type " + streams[s], e);
             }
         }
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
+
+        mVoiceCapable = context.getResources().getBoolean(
+                com.android.internal.R.bool.config_voice_capable);
 
         if (looper == null) {
             createAudioSystemThread();

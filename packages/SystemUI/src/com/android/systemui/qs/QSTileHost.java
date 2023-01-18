@@ -105,10 +105,7 @@ public class QSTileHost implements QSHost, Tunable, PluginListener<QSFactory>, D
     private final InstanceIdSequence mInstanceIdSequence;
     private final CustomTileStatePersister mCustomTileStatePersister;
     private final Executor mMainExecutor;
-<<<<<<< HEAD
-=======
     private final UserFileManager mUserFileManager;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 
     private final List<Callback> mCallbacks = new ArrayList<>();
     @Nullable
@@ -404,14 +401,11 @@ public class QSTileHost implements QSHost, Tunable, PluginListener<QSFactory>, D
      */
     @Override
     public void removeTile(String spec) {
-<<<<<<< HEAD
-=======
         if (spec.startsWith(CustomTile.PREFIX)) {
             // If the tile is removed (due to it not actually existing), mark it as removed. That
             // way it will be marked as newly added if it appears in the future.
             setTileAdded(CustomTile.getComponentFromSpec(spec), mCurrentUser, false);
         }
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
         mMainExecutor.execute(() -> changeTileSpecs(tileSpecs-> tileSpecs.remove(spec)));
     }
 
@@ -462,10 +456,6 @@ public class QSTileHost implements QSHost, Tunable, PluginListener<QSFactory>, D
         );
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     // When calling this, you may want to modify mTilesListDirty accordingly.
     @MainThread
     private void saveTilesToSettings(List<String> tileSpecs) {

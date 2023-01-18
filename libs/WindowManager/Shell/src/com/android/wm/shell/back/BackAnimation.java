@@ -54,21 +54,11 @@ public interface BackAnimation {
     void setTriggerBack(boolean triggerBack);
 
     /**
-<<<<<<< HEAD
      * Sets whether the back long swipe gesture is past the trigger threshold or not.
      */
     void setTriggerLongSwipe(boolean triggerLongSwipe);
 
     /**
-     * Returns a binder that can be passed to an external process to update back animations.
-     */
-    default IBackAnimation createExternalInterface() {
-        return null;
-    }
-
-    /**
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
      * Sets the threshold values that defining edge swipe behavior.
      * @param triggerThreshold the min threshold to trigger back.
      * @param progressThreshold the max threshold to keep progressing back animation.

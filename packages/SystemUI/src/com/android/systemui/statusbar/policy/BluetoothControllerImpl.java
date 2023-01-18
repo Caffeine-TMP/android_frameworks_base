@@ -326,7 +326,6 @@ public class BluetoothControllerImpl implements BluetoothController, BluetoothCa
     }
 
     @Override
-<<<<<<< HEAD
     public int getBatteryLevel() {
         if (!mConnectedDevices.isEmpty()) {
             return mConnectedDevices.get(0).getBatteryLevel();
@@ -342,13 +341,8 @@ public class BluetoothControllerImpl implements BluetoothController, BluetoothCa
         }
     }
 
-    @Override
-    public void onBluetoothStateChanged(int bluetoothState) {
-        if (DEBUG) Log.d(TAG, "BluetoothStateChanged=" + stateToString(bluetoothState));
-=======
     public void onBluetoothStateChanged(@AdapterState int bluetoothState) {
         mLogger.logStateChange(BluetoothAdapter.nameForState(bluetoothState));
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
         mEnabled = bluetoothState == BluetoothAdapter.STATE_ON
                 || bluetoothState == BluetoothAdapter.STATE_TURNING_ON;
         mState = bluetoothState;

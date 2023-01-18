@@ -37,16 +37,12 @@ import com.android.internal.widget.LockPatternUtils;
 import com.android.settingslib.Utils;
 import com.android.systemui.R;
 
-<<<<<<< HEAD
 import android.provider.Settings;
 
-public class NumPadKey extends ViewGroup {
-=======
 /**
  * Viewgroup for the bouncer numpad button, specifically for digits.
  */
 public class NumPadKey extends ViewGroup implements NumPadAnimationListener {
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     // list of "ABC", etc per digit, starting with '0'
     static String sKlondike[];
 

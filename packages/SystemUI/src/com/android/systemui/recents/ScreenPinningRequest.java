@@ -251,12 +251,8 @@ public class ScreenPinningRequest implements View.OnClickListener,
                     .setLayoutDirection(View.LAYOUT_DIRECTION_LOCALE);
             View buttons = mLayout.findViewById(R.id.screen_pinning_buttons);
             if (!QuickStepContract.isGesturalMode(mNavBarMode)
-<<<<<<< HEAD
-                    && wm.hasSoftNavigationBar(mContext, mContext.getDisplayId())
+                    && hasSoftNavigationBar(mContext, mContext.getDisplayId())
                     && !isTablet(mContext)) {
-=======
-            	    && hasSoftNavigationBar(mContext.getDisplayId()) && !isTablet(mContext)) {
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
                 buttons.setLayoutDirection(View.LAYOUT_DIRECTION_LOCALE);
                 swapChildrenIfRtlAndVertical(buttons);
             } else {

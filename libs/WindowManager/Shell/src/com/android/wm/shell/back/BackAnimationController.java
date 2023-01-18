@@ -41,10 +41,7 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings.Global;
 import android.util.Log;
-<<<<<<< HEAD
-=======
 import android.view.IWindowFocusObserver;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 import android.view.InputDevice;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
@@ -574,14 +571,6 @@ public class BackAnimationController implements RemoteCallable<BackAnimationCont
             finishAnimation();
             return;
         }
-<<<<<<< HEAD
-        if (mTriggerLongSwipe) {
-            // Let key event handlers deal with back long swipe gesture
-            sendEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK, KeyEvent.FLAG_LONG_SWIPE);
-            sendEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK, KeyEvent.FLAG_LONG_SWIPE);
-            return;
-        }
-=======
 
         if (fromTouch) {
             // Let touch reset the flag otherwise it will start a new back navigation and refresh
@@ -603,7 +592,13 @@ public class BackAnimationController implements RemoteCallable<BackAnimationCont
             return;
         }
 
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
+        if (mTriggerLongSwipe) {
+            // Let key event handlers deal with back long swipe gesture
+            sendEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK, KeyEvent.FLAG_LONG_SWIPE);
+            sendEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK, KeyEvent.FLAG_LONG_SWIPE);
+            return;
+        }
+
         int backType = mBackNavigationInfo.getType();
         boolean shouldDispatchToLauncher = shouldDispatchToLauncher(backType);
         IOnBackInvokedCallback targetCallback = shouldDispatchToLauncher
@@ -725,11 +720,8 @@ public class BackAnimationController implements RemoteCallable<BackAnimationCont
         boolean triggerBack = mTriggerBack;
         mBackNavigationInfo = null;
         mTriggerBack = false;
-<<<<<<< HEAD
         mTriggerLongSwipe = false;
-=======
         mShouldStartOnNextMoveEvent = false;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
         if (backNavigationInfo == null) {
             return;
         }

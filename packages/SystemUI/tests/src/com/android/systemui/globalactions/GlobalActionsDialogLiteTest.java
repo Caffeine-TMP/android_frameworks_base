@@ -122,12 +122,9 @@ public class GlobalActionsDialogLiteTest extends SysuiTestCase {
     @Mock private CentralSurfaces mCentralSurfaces;
     @Mock private KeyguardUpdateMonitor mKeyguardUpdateMonitor;
     @Mock private DialogLaunchAnimator mDialogLaunchAnimator;
-<<<<<<< HEAD
     @Mock private ControlsComponent mControlsComponent;
-=======
     @Mock private OnBackInvokedDispatcher mOnBackInvokedDispatcher;
     @Captor private ArgumentCaptor<OnBackInvokedCallback> mOnBackInvokedCallback;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 
     private TestableLooper mTestableLooper;
 

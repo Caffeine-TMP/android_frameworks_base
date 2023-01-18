@@ -45,11 +45,8 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.VisibleForTesting;
 
-<<<<<<< HEAD
 import com.android.systemui.Dependency;
-=======
 import com.android.systemui.Dumpable;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 import com.android.systemui.R;
 import com.android.systemui.animation.Interpolators;
 import com.android.systemui.dagger.qualifiers.Main;
@@ -104,11 +101,7 @@ import java.util.concurrent.Executor;
 @SuppressLint("ValidFragment")
 public class CollapsedStatusBarFragment extends Fragment implements CommandQueue.Callbacks,
         StatusBarStateController.StateListener,
-<<<<<<< HEAD
-        SystemStatusAnimationCallback, TunerService.Tunable {
-=======
-        SystemStatusAnimationCallback, Dumpable {
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
+        SystemStatusAnimationCallback, Dumpable, TunerService.Tunable {
 
     public static final String TAG = "CollapsedStatusBarFragment";
     private static final String EXTRA_PANEL_STATE = "panel_state";
@@ -121,12 +114,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     private final KeyguardStateController mKeyguardStateController;
     private final NotificationPanelViewController mNotificationPanelViewController;
     private final NetworkController mNetworkController;
-<<<<<<< HEAD
-    private LinearLayout mSystemIconArea;
-=======
     private LinearLayout mEndSideContent;
-    private View mClockView;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     private View mOngoingCallChip;
     private View mNotificationIconAreaInner;
     private int mDisabled1;
@@ -148,12 +136,9 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     private final StatusBarIconController.DarkIconManager.Factory mDarkIconManagerFactory;
     private final SecureSettings mSecureSettings;
     private final Executor mMainExecutor;
-<<<<<<< HEAD
+    private final DumpManager mDumpManager;
     private ClockController mClockController;
     private boolean mIsClockBlacklisted;
-=======
-    private final DumpManager mDumpManager;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 
     private List<String> mBlockedIcons = new ArrayList<>();
     private Map<Startable, Startable.State> mStartableStates = new ArrayMap<>();
@@ -275,13 +260,8 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mDarkIconManager.setShouldLog(true);
         updateBlockedIcons();
         mStatusBarIconController.addIconGroup(mDarkIconManager);
-<<<<<<< HEAD
-        mSystemIconArea = mStatusBar.findViewById(R.id.system_icon_area);
-        mClockController = mStatusBar.getClockController();
-=======
         mEndSideContent = mStatusBar.findViewById(R.id.status_bar_end_side_content);
-        mClockView = mStatusBar.findViewById(R.id.clock);
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
+        mClockController = mStatusBar.getClockController();
         mOngoingCallChip = mStatusBar.findViewById(R.id.ongoing_call_chip);
         showEndSideContent(false);
         showClock(false);

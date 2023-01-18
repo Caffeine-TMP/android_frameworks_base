@@ -35,14 +35,9 @@ import com.android.systemui.settings.brightness.ToggleSlider;
 import com.android.systemui.shade.NotificationPanelViewController;
 import com.android.systemui.shade.NotificationShadeWindowView;
 import com.android.systemui.statusbar.NotificationShadeDepthController;
-<<<<<<< HEAD
-import com.android.systemui.statusbar.phone.NotificationPanelViewController;
-import com.android.systemui.statusbar.phone.NotificationShadeWindowView;
 import com.android.systemui.tuner.TunerService;
 
 import android.provider.Settings;
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 
 import java.util.Objects;
 import java.util.function.Consumer;
@@ -86,7 +81,7 @@ public class BrightnessMirrorController
             mBrightnessMirror.setVisibility(View.INVISIBLE);
         });
         mVisibilityCallback = visibilityCallback;
-<<<<<<< HEAD
+        updateResources();
 
         TunerService.Tunable tunable = (key, newValue) -> {
             if (QS_SHOW_AUTO_BRIGHTNESS.equals(key)) {
@@ -98,9 +93,6 @@ public class BrightnessMirrorController
 
         mIsAutomaticBrightnessAvailable = mBrightnessMirror.getContext().getResources().getBoolean(
                 com.android.internal.R.bool.config_automatic_brightness_available);
-=======
-        updateResources();
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     }
 
     public void showMirror() {

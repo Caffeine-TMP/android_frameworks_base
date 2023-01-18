@@ -950,11 +950,6 @@ interface IWindowManager
     void setRecentsAppBehindSystemBars(boolean behindSystemBars);
 
     /**
-<<<<<<< HEAD
-     * Notifies DisplayPolicy that overlays changed.
-     */
-    void onOverlayChanged();
-=======
      * Gets the background color of the letterbox. Considered invalid if the background has
      * multiple colors {@link #isLetterboxBackgroundMultiColored}. Should be called by SystemUI when
      * computing the letterbox appearance for status bar treatment.
@@ -967,5 +962,9 @@ interface IWindowManager
      * treatment.
      */
     boolean isLetterboxBackgroundMultiColored();
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
+
+    /**
+     * Notifies DisplayPolicy that overlays changed.
+     */
+    void onOverlayChanged();
 }

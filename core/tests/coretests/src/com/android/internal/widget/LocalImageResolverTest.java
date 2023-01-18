@@ -281,8 +281,6 @@ public class LocalImageResolverTest {
         // This drawable must not be loaded - if it was, the code ignored the package specification.
         assertThat(d).isNull();
     }
-<<<<<<< HEAD
-=======
 
     @Test
     public void resolveResourcesForIcon_notAResourceIcon_returnsNull() {
@@ -328,5 +326,4 @@ public class LocalImageResolverTest {
         Icon icon = Icon.createWithResource("invalid.package", R.drawable.test32x24);
         assertThat(LocalImageResolver.resolveResourcesForIcon(mContext, icon)).isNull();
     }
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 }

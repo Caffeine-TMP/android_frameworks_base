@@ -794,11 +794,7 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
     private void handleFingerprintAuthFailed() {
         Assert.isMainThread();
         if (mHandler.hasCallbacks(mFpCancelNotReceived)) {
-<<<<<<< HEAD
-            Log.d(TAG, "handleFingerprintAuthFailed()"
-=======
             mLogger.d("handleFingerprintAuthFailed()"
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
                     + " triggered while waiting for cancellation, removing watchdog");
             mHandler.removeCallbacks(mFpCancelNotReceived);
         }
@@ -838,11 +834,7 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
     private void handleFingerprintAuthenticated(int authUserId, boolean isStrongBiometric) {
         Trace.beginSection("KeyGuardUpdateMonitor#handlerFingerPrintAuthenticated");
         if (mHandler.hasCallbacks(mFpCancelNotReceived)) {
-<<<<<<< HEAD
-            Log.d(TAG, "handleFingerprintAuthenticated()"
-=======
             mLogger.d("handleFingerprintAuthenticated()"
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
                     + " triggered while waiting for cancellation, removing watchdog");
             mHandler.removeCallbacks(mFpCancelNotReceived);
         }

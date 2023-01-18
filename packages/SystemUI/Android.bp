@@ -124,11 +124,8 @@ android_library {
         "dagger2",
         "jsr330",
         "lottie",
-<<<<<<< HEAD
-        "vendor.lineage.powershare-V1.0-java",
-=======
         "LowLightDreamLib",
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
+        "vendor.lineage.powershare-V1.0-java",
     ],
     manifest: "AndroidManifest.xml",
     additional_manifests: ["LMODroidManifest.xml"],
@@ -233,11 +230,8 @@ android_library {
         "dagger2",
         "jsr330",
         "WindowManager-Shell",
-<<<<<<< HEAD
-        "vendor.lineage.powershare-V1.0-java",
-=======
         "LowLightDreamLib",
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
+        "vendor.lineage.powershare-V1.0-java",
     ],
     libs: [
         "android.test.runner",

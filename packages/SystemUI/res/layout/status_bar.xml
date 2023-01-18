@@ -68,19 +68,6 @@
 
                 <include layout="@layout/heads_up_status_bar_layout" />
 
-<<<<<<< HEAD
-                <com.android.systemui.statusbar.policy.Clock
-                    android:id="@+id/clock"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textAppearance="@style/TextAppearance.StatusBar.Clock"
-                    android:singleLine="true"
-                    android:paddingStart="@dimen/status_bar_left_clock_starting_padding"
-                    android:paddingEnd="@dimen/status_bar_left_clock_end_padding"
-                    android:gravity="center_vertical|start"
-                    systemui:isStatusBar="true"
-                />
-=======
                 <!-- The alpha of the start side is controlled by PhoneStatusBarTransitions, and the
                      individual views are controlled by StatusBarManager disable flags DISABLE_CLOCK
                      and DISABLE_NOTIFICATION_ICONS, respectively -->
@@ -94,7 +81,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout="@layout/operator_name" />
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 
                     <com.android.systemui.statusbar.policy.Clock
                         android:id="@+id/clock"
@@ -105,6 +91,7 @@
                         android:paddingStart="@dimen/status_bar_left_clock_starting_padding"
                         android:paddingEnd="@dimen/status_bar_left_clock_end_padding"
                         android:gravity="center_vertical|start"
+                        systemui:isStatusBar="true"
                     />
 
                     <include layout="@layout/ongoing_call_chip" />

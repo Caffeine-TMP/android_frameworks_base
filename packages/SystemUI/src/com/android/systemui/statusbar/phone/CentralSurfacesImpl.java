@@ -795,13 +795,9 @@ public class CentralSurfacesImpl extends CoreStartable implements
             ActivityLaunchAnimator activityLaunchAnimator,
             InteractionJankMonitor jankMonitor,
             DeviceStateManager deviceStateManager,
-<<<<<<< HEAD
-            DreamOverlayStateController dreamOverlayStateController,
-            TunerService tunerService,
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
             WiredChargingRippleController wiredChargingRippleController,
-            IDreamManager dreamManager) {
+            IDreamManager dreamManager,
+            TunerService tunerService) {
         super(context);
         mNotificationsController = notificationsController;
         mFragmentService = fragmentService;
@@ -879,15 +875,11 @@ public class CentralSurfacesImpl extends CoreStartable implements
         mMessageRouter = messageRouter;
         mWallpaperManager = wallpaperManager;
         mJankMonitor = jankMonitor;
-<<<<<<< HEAD
-        mDreamOverlayStateController = dreamOverlayStateController;
-        mTunerService = tunerService;
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
 
         mLockscreenShadeTransitionController = lockscreenShadeTransitionController;
         mStartingSurfaceOptional = startingSurfaceOptional;
         mDreamManager = dreamManager;
+        mTunerService = tunerService;
         lockscreenShadeTransitionController.setCentralSurfaces(this);
         statusBarWindowStateController.addListener(this::onStatusBarWindowStateChanged);
 

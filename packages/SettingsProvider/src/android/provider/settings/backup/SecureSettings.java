@@ -211,14 +211,11 @@ public class SecureSettings {
         Settings.Secure.LOCK_SCREEN_SHOW_QR_CODE_SCANNER,
         Settings.Secure.LOCKSCREEN_USE_DOUBLE_LINE_CLOCK,
         Settings.Secure.STATUS_BAR_SHOW_VIBRATE_ICON,
-<<<<<<< HEAD
-        Settings.Secure.TETHERING_ALLOW_VPN_UPSTREAMS
-=======
         Settings.Secure.ASSIST_TOUCH_GESTURE_ENABLED,
         Settings.Secure.ASSIST_LONG_PRESS_HOME_ENABLED,
         Settings.Secure.BLUETOOTH_LE_BROADCAST_PROGRAM_INFO,
         Settings.Secure.BLUETOOTH_LE_BROADCAST_CODE,
-        Settings.Secure.BLUETOOTH_LE_BROADCAST_APP_SOURCE_NAME
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
+        Settings.Secure.BLUETOOTH_LE_BROADCAST_APP_SOURCE_NAME,
+        Settings.Secure.TETHERING_ALLOW_VPN_UPSTREAMS
     };
 }

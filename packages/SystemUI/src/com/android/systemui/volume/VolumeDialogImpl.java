@@ -82,11 +82,8 @@ import android.os.VibrationEffect;
 import android.provider.Settings;
 import android.provider.Settings.Global;
 import android.text.InputFilter;
-<<<<<<< HEAD
-import android.text.TextUtils;
-=======
 import android.util.FeatureFlagUtils;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
+import android.text.TextUtils;
 import android.util.Log;
 import android.util.Slog;
 import android.util.SparseBooleanArray;
@@ -1279,7 +1276,6 @@ public class VolumeDialogImpl implements VolumeDialog,
         if (mSettingsIcon != null) {
             mSettingsIcon.setOnClickListener(v -> {
                 Events.writeEvent(Events.EVENT_SETTINGS_CLICK);
-<<<<<<< HEAD
                 String packageName = isMediaControllerAvailable()
                         ? getActiveLocalMediaController().getPackageName() : "";
                 mMediaOutputDialogFactory.create(packageName, true, mDialogView);
@@ -1297,17 +1293,6 @@ public class VolumeDialogImpl implements VolumeDialog,
                 mExpanded = !mExpanded;
                 updateRowsH(mDefaultRow, true);
                 mExpandRows.setExpanded(mExpanded);
-=======
-                dismissH(DISMISS_REASON_SETTINGS_CLICKED);
-                mMediaOutputDialogFactory.dismiss();
-                if (FeatureFlagUtils.isEnabled(mContext,
-                        FeatureFlagUtils.SETTINGS_VOLUME_PANEL_IN_SYSTEMUI)) {
-                    mVolumePanelFactory.create(true /* aboveStatusBar */, null);
-                } else {
-                    mActivityStarter.startActivity(new Intent(Settings.Panel.ACTION_VOLUME),
-                            true /* dismissShade */);
-                }
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
             });
         }
     }

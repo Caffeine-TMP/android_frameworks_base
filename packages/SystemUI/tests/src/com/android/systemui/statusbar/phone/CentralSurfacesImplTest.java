@@ -285,12 +285,8 @@ public class CentralSurfacesImplTest extends SysuiTestCase {
     @Mock private NotifLiveDataStore mNotifLiveDataStore;
     @Mock private InteractionJankMonitor mJankMonitor;
     @Mock private DeviceStateManager mDeviceStateManager;
-<<<<<<< HEAD
-    @Mock private DreamOverlayStateController mDreamOverlayStateController;
-    @Mock private TunerService mTunerService;
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     @Mock private WiredChargingRippleController mWiredChargingRippleController;
+    @Mock private TunerService mTunerService;
     /**
      * The process of registering/unregistering a predictive back callback requires a
      * ViewRootImpl, which is present IRL, but may be missing during a Mockito unit test.
@@ -481,12 +477,8 @@ public class CentralSurfacesImplTest extends SysuiTestCase {
                 mActivityLaunchAnimator,
                 mJankMonitor,
                 mDeviceStateManager,
-<<<<<<< HEAD
-                mDreamOverlayStateController,
-                mTunerService,
-                mWiredChargingRippleController, mDreamManager);
-=======
-                mWiredChargingRippleController, mDreamManager) {
+                mWiredChargingRippleController, mDreamManager
+                mTunerService) {
             @Override
             protected ViewRootImpl getViewRootImpl() {
                 return mViewRootImpl;
@@ -494,7 +486,6 @@ public class CentralSurfacesImplTest extends SysuiTestCase {
         };
         when(mViewRootImpl.getOnBackInvokedDispatcher())
                 .thenReturn(mOnBackInvokedDispatcher);
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
         when(mKeyguardViewMediator.registerCentralSurfaces(
                 any(CentralSurfacesImpl.class),
                 any(NotificationPanelViewController.class),

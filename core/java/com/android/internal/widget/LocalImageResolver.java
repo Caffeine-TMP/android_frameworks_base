@@ -111,15 +111,6 @@ public class LocalImageResolver {
                 }
                 break;
             case Icon.TYPE_RESOURCE:
-<<<<<<< HEAD
-                if (!(TextUtils.isEmpty(icon.getResPackage())
-                        || context.getPackageName().equals(icon.getResPackage()))) {
-                    // We can't properly resolve icons from other packages here, so fall back.
-                    return icon.loadDrawable(context);
-                }
-
-                Drawable result = resolveImage(icon.getResId(), context, maxWidth, maxHeight);
-=======
                 Resources res = resolveResourcesForIcon(context, icon);
                 if (res == null) {
                     // We couldn't resolve resources properly, fall back to icon loading.
@@ -127,7 +118,6 @@ public class LocalImageResolver {
                 }
 
                 Drawable result = resolveImage(res, icon.getResId(), maxWidth, maxHeight);
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
                 if (result != null) {
                     return tintDrawable(icon, result);
                 }

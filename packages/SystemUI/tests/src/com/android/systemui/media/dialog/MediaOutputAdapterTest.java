@@ -327,8 +327,6 @@ public class MediaOutputAdapterTest extends SysuiTestCase {
     }
 
     @Test
-<<<<<<< HEAD
-=======
     public void onItemClick_clicksWithMutingExpectedDeviceExist_cancelsMuteAwaitConnection() {
         when(mMediaOutputController.isAnyDeviceTransferring()).thenReturn(false);
         when(mMediaOutputController.hasMutingExpectedDevice()).thenReturn(true);
@@ -354,7 +352,6 @@ public class MediaOutputAdapterTest extends SysuiTestCase {
     }
 
     @Test
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     public void onItemClick_onGroupActionTriggered_verifySeekbarDisabled() {
         when(mMediaOutputController.getSelectedMediaDevice()).thenReturn(mMediaDevices);
         List<MediaDevice> selectableDevices = new ArrayList<>();

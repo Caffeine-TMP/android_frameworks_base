@@ -592,42 +592,13 @@ public class ScreenshotController {
                 ClipboardOverlayController.SELF_PERMISSION);
     }
 
-<<<<<<< HEAD
-    private Bitmap captureScreenshot(Rect crop) {
-        int width = crop.width();
-        int height = crop.height();
-        Bitmap screenshot = null;
-        final Display display = getDefaultDisplay();
-        final DisplayAddress address = display.getAddress();
-        if (!(address instanceof DisplayAddress.Physical)) {
-            Log.e(TAG, "Skipping Screenshot - Default display does not have a physical address: "
-                    + display);
-        } else {
-            final DisplayAddress.Physical physicalAddress = (DisplayAddress.Physical) address;
-
-            final IBinder displayToken = SurfaceControl.getPhysicalDisplayToken(
-                    physicalAddress.getPhysicalDisplayId());
-            final SurfaceControl.DisplayCaptureArgs captureArgs =
-                    new SurfaceControl.DisplayCaptureArgs.Builder(displayToken)
-                            .setSourceCrop(crop)
-                            .setSize(width, height)
-                            .build();
-            final SurfaceControl.ScreenshotHardwareBuffer screenshotBuffer =
-                    SurfaceControl.captureDisplay(captureArgs);
-            screenshot = screenshotBuffer == null ? null : screenshotBuffer.asBitmap();
-        }
-        return screenshot;
-    }
-
     private Bitmap captureScreenshot() {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getDefaultDisplay().getRealMetrics(displayMetrics);
-        return captureScreenshot(
+        return mImageCapture.captureDisplay(DEFAULT_DISPLAY,
                 new Rect(0, 0, displayMetrics.widthPixels, displayMetrics.heightPixels));
     }
 
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     private void saveScreenshot(Bitmap screenshot, Consumer<Uri> finisher, Rect screenRect,
             Insets screenInsets, ComponentName topComponent, boolean showFlash) {
         withWindowAttached(() ->
@@ -1044,14 +1015,9 @@ public class ScreenshotController {
         }
 
         mSaveInBgTask = new SaveImageInBackgroundTask(mContext, mImageExporter,
-<<<<<<< HEAD
-                mScreenshotSmartActions, data, getActionTransitionSupplier());
-        mSaveInBgTask.execute(getForegroundAppLabel());
-=======
                 mScreenshotSmartActions, data, getActionTransitionSupplier(),
                 mScreenshotNotificationSmartActionsProvider);
-        mSaveInBgTask.execute();
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
+        mSaveInBgTask.execute(getForegroundAppLabel());
     }
 
 

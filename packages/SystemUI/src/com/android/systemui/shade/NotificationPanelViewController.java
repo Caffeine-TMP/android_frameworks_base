@@ -350,14 +350,8 @@ public final class NotificationPanelViewController extends PanelViewController {
     /** Current max allowed keyguard notifications determined by measuring the panel. */
     private int mMaxAllowedKeyguardNotifications;
 
-<<<<<<< HEAD:packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationPanelViewController.java
-    private ViewGroup mPreviewContainer;
-
     private final TunerService mTunerService;
 
-    private KeyguardAffordanceHelper mAffordanceHelper;
-=======
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b:packages/SystemUI/src/com/android/systemui/shade/NotificationPanelViewController.java
     private KeyguardQsUserSwitchController mKeyguardQsUserSwitchController;
     private KeyguardUserSwitcherController mKeyguardUserSwitcherController;
     private KeyguardStatusBarView mKeyguardStatusBar;
@@ -654,16 +648,9 @@ public final class NotificationPanelViewController extends PanelViewController {
     private final ContentResolver mContentResolver;
     private float mMinFraction;
 
-<<<<<<< HEAD:packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationPanelViewController.java
     private int mOneFingerQuickSettingsIntercept;
 
-    private final Executor mUiExecutor;
-    private final SecureSettings mSecureSettings;
-
-    private KeyguardMediaController mKeyguardMediaController;
-=======
     private final KeyguardMediaController mKeyguardMediaController;
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b:packages/SystemUI/src/com/android/systemui/shade/NotificationPanelViewController.java
 
     private boolean mStatusViewCentered = true;
 
@@ -796,13 +783,10 @@ public final class NotificationPanelViewController extends PanelViewController {
             UnlockedScreenOffAnimationController unlockedScreenOffAnimationController,
             ShadeTransitionController shadeTransitionController,
             SystemClock systemClock,
-<<<<<<< HEAD:packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationPanelViewController.java
-            TunerService tunerService) {
-=======
             CameraGestureHelper cameraGestureHelper,
             KeyguardBottomAreaViewModel keyguardBottomAreaViewModel,
-            KeyguardBottomAreaInteractor keyguardBottomAreaInteractor) {
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b:packages/SystemUI/src/com/android/systemui/shade/NotificationPanelViewController.java
+            KeyguardBottomAreaInteractor keyguardBottomAreaInteractor,
+            TunerService tunerService) {
         super(view,
                 falsingManager,
                 dozeLog,
