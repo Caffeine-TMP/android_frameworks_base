@@ -1018,10 +1018,8 @@ public class EdgeBackGestureHandler extends CurrentUserTracker
         if (mEdgeBackPlugin != null) {
             mEdgeBackPlugin.setDisplaySize(mDisplaySize);
         }
-<<<<<<< HEAD
-        updateLongSwipeWidth();
-=======
         updateBackAnimationThresholds();
+        updateLongSwipeWidth();
     }
 
     private void updateBackAnimationThresholds() {
@@ -1031,7 +1029,6 @@ public class EdgeBackGestureHandler extends CurrentUserTracker
         mBackAnimation.setSwipeThresholds(
                 mBackSwipeTriggerThreshold,
                 Math.min(mDisplaySize.x, mBackSwipeProgressThreshold));
->>>>>>> b1b19184adb329931c6473cd78b6b5d502a3126b
     }
 
     private boolean sendEvent(int action, int code, int flags) {
